@@ -1,0 +1,39 @@
+.title {
+    font-size: large;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px black solid;
+}
+
+.text {
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+img {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px; 
+}
+
+.indent {
+  border: 1px solid;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+  background-color: #FFF;
+  padding: 4px; 
+}
+
+.gradient {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: linear-gradient(#C774E8, #94D0FF); 
+}
