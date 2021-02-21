@@ -11,7 +11,24 @@
   </xsl:template>
 
   <xsl:template match="chapter">
-    number:      <xsl:apply-templates select="@number"/>
+    chapter:      <xsl:apply-templates select="chapter"/>
+    pages:     <xsl:apply-templates select="@pages"/>
+    <xsl:text>
+  </xsl:text>
+
+  </xsl:template>
+
+  <xsl:template match="employees">
+    <xsl:apply-templates>
+      <xsl:sort select="salary"/>
+    </xsl:apply-templates>
+  </xsl:template>
+
+  <xsl:template match="employee">
+    Last:      <xsl:apply-templates select="last"/>
+    First:     <xsl:apply-templates select="first"/>
+    Salary:    <xsl:apply-templates select="salary"/>
+    Hire Date: <xsl:apply-templates select="@hireDate"/>
     <xsl:text>
   </xsl:text>
 
