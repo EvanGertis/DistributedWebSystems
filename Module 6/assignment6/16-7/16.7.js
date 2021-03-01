@@ -74,7 +74,6 @@ function checkEmailFormat(emailElement){
             emailElement.parentNode.removeChild(emailElement);
     }
     else{
-        console.log(emailElement.value);
         addEmailWarning(emailElement, " |Invalid email|");
     }
 }
@@ -86,6 +85,9 @@ function addEmailWarning(emailElement, warning){
         label.id    = "email-format-warning";
         emailElement.parentNode.appendChild(label);
     }
+}
+
+function addBlackListEmailWarning(emailElement, warning){
     if(!document.getElementById("email-blacklist-warning")){
         var label   = document.createElement("label");
         label.innerHTML = warning;
@@ -102,19 +104,19 @@ function checkEmailList(emailElement){
     asyncRequest.send(null);
 }
 
-
-function removeEmailWarning(){
-    var blacklistWarning = document.getElementById("email-blacklist-warning");
-    // blacklistWarning.remove();
-}
-
 function processResponse(){
-    removeEmailWarning();
-
     if(asyncRequest.readyState==4 && asyncRequest.status==200 && asyncRequest.responseXML){
         var emails = asyncRequest.responseXML.getElementsByTagName("email");
-        for(var i=0; i < emails.length;i++)
-            if(email.value==emails[i].textContent)
-                addEmailWarning(email, " |black listed email|");
+        var removeWarning = false;
+        for(var i=0; i < emails.length;i++){
+            removeWarning = true;
+            if(email.value==emails[i].textContent){
+                addBlackListEmailWarning(email, " |black listed|");
+                removeWarning = false;
+            }
+        }
+        if(removeWarning && document.getElementById("email-blacklist-warning")){
+            document.getElementById("email-blacklist-warning").remove();
+        }
     }
 }
