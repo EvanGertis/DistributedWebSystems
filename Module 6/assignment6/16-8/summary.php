@@ -1,4 +1,4 @@
 <?php
-$data = readfile("summary.json");
-header('Content-Type: application/json');
-echo json_encode($data);
+$data = file_get_contents("summary.json");
+header('Content-Type: text/json;charset=utf-8');
+echo $data;

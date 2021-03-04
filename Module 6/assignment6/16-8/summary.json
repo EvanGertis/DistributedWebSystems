@@ -1,7 +1,19 @@
 {
     "products":[
-        {"product":"professional pencil", "image":"pencil.jpg", "description":"The most verstile tool any programmer can have. With this professional pencil you'll be able to sketch out plans and fix mistakes!"},
-        {"product":"coffee mug", "image":"coffee_mug.jpg", "description":"Keep your programming skills sharp and your coffee hot with this one of a kind coffee mug."},
-        {"product":"programming book", "image":"programming_book.jpg", "description":"Learn how to program effectively by reading this book."}
+        {
+            "product":"professional pencil",
+            "image":"pencil.jpg",
+            "description":"The most verstile tool any programmer can have. With this professional pencil you'll be able to sketch out plans and fix mistakes!"
+        },
+        {
+            "product":"coffee mug",
+            "image":"coffee_mug.jpg",
+            "description":"Keep your programming skills sharp and your coffee hot with this one of a kind coffee mug."
+        },
+        {
+            "product":"programming book",
+            "image":"programming_book.jpg",
+            "description":"Learn how to program effectively by reading this book."
+        }
     ]
 }
