@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- index.xhtml -->
+<!-- Allow the user to select a topic -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Topic Selection Page</title>
+    </h:head>
+    <h:body>
+        <h1>Shopping Cart</h1>
+        <ul>
+            <c:forEach var="item" items="${selectionsBean.selections}">
+                <li>
+                    <label>Title: #{item.title}</label>
+                    <p>Genre: #{item.genre}</p>
+                    <p>Price: #{item.price}</p>
+                </li>
+            </c:forEach>
+        </ul>
+        <p>Total: #{selectionsBean.selections.stream().map(book -> book.price).sum()}</p>
+        <p><h:outputLink value="index.xhtml">
+                Click here to go back to selections
+            </h:outputLink></p>
+    </h:body>
+</html>

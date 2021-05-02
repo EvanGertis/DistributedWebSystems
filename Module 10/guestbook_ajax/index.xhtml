@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- index.html -->
+<!-- Displays an h:dataTable of the addresses in the address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Guest Book</title>
+        <h:outputStylesheet name="style.css" library="css"/>
+    </h:head>
+    <h:body>
+        <h1>Guest Book: Add Entry</h1>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputText value="Date:"/>
+                <h:inputText id="dateInputText" required="true"
+                             requiredMessage="Please enter the date"
+                             value="#{guestbookBean.date}" maxlength="30"/>
+                <h:message for="dateInputText" styleClass="error"/>
+                <h:outputText value="Name:"/>
+                <h:inputText id="nameInputText" required="true"
+                             requiredMessage="Please enter name"
+                             value="#{guestbookBean.name}" maxlength="30"/>
+                <h:message for="nameInputText" styleClass="error"/>
+                <h:outputText value="Email :"/>
+                <h:inputText id="emailInputText" required="true"
+                             requiredMessage="Please enter your email"
+                             value="#{guestbookBean.email}" maxlength="150"/>
+                <h:message for="emailInputText" styleClass="error"/>
+                <h:outputText value="Message :"/>
+                <h:inputText id="messageInputText" required="true"
+                             requiredMessage="Please enter the message"
+                             value="#{guestbookBean.message}" maxlength="30"/>
+            </h:panelGrid>
+            <h:commandButton value="Save Address"
+                             action="#{guestbookBean.save}">
+                <f:ajax execute="dateInputText nameInputText emailInputText messageInputText" render="dataTable"/>
+            </h:commandButton>
+        </h:form>
+        <h1>Guest Book</h1>
+        <h:dataTable id="dataTable" value="#{guestbookBean.guests}" var="guest"
+                     rowClasses="oddRows,evenRows" headerClass="header"      
+                     styleClass="table" cellpadding="5" cellspacing="0">     
+            <h:column>                                    
+                <f:facet name="header">Date</f:facet>
+                    #{guest.date}                       
+            </h:column>                                   
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                    #{guest.name}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                    #{guest.email}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Message</f:facet>
+                    #{guest.message}
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>

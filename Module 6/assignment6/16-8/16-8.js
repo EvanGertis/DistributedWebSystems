@@ -28,7 +28,7 @@ function getDescription(product){
     gProduct = product;
     asyncRequest = new XMLHttpRequest();
     asyncRequest.addEventListener("readystatechange",toggleDescription, false);
-    asyncRequest.open("GET","http://localhost/descriptions.php",true);
+    asyncRequest.open("GET","http://localhost/router.php?file=descriptions.json",true);
     asyncRequest.send(null);
 }
 
@@ -64,7 +64,7 @@ function decreaseImageSize(image){
 function initializeCatalog(){
     asyncRequest = new XMLHttpRequest();
     asyncRequest.addEventListener("readystatechange", generateProductCatalog, false);
-    asyncRequest.open("GET","http://localhost/summary.php",true);
+    asyncRequest.open("GET","http://localhost/router.php?file=summary.json",true);
     asyncRequest.send(null);
 }
 

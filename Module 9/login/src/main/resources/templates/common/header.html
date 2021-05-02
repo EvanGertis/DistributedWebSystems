@@ -1,0 +1,16 @@
+ <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+	<div id="header-div" class="content-header" th:fragment="headerfragment">
+ 		<header><h1 th:text="'E-Commerce Gurus: ' + ${title}"></h1></header>
+ 		<nav>
+			<div><a id="home" href="home">home</a></div>
+			<div><a id="cart" href="cart" th:text="${basket_quantity} ?: 'cart'"></a></div>
+			<div th:if="${!#strings.equals(login.username, 'guest') && !#strings.equals(login.username, 'null') && login.logged_in}" ><a id="ticket" href="ticket" name="getticket">tickets</a></div>
+    	<div><a id="login" href="login" th:text="${!#strings.equals(login.username, 'guest') && !#strings.equals(login.username, 'null')} ? 'Logout' : 'Login'" ></a></div>
+ 		</nav>
+ 		<h1 th:text="${title}" ></h1>
+ 		<p th:text="${message}" />
+ </div>
+	
+ </html>

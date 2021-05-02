@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'E-Commerce Gurus: ' + ${title}"></title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="css/css.css" rel="stylesheet">
+    
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="content">
+	<header id="header-section" class="content-header" th:replace="common/header::headerfragment"></header>
+		<section id="login_form_section">
+			<p id="loginMessage" th:text="${loginMessage}" />
+	    <form id="login_form" action="#" th:action="@{/login}" method="post">
+	    	<p>Username: <input type="text" name="username" /></p>
+	        <p>Password: <input type="password" name="password" /></p>
+	        <p><input type="submit" name="login" value="Login" /><input type="submit" name="create" value="Create New Account" /></p>
+	    </form>
+	    <a href="guestlogin">continue as guest</a>
+    </section>
+</body>
+</html>

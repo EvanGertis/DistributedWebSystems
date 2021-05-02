@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- index.html -->
+<!-- Displays an h:dataTable of the addresses in the address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Guest Book</title>
+        <h:outputStylesheet name="style.css" library="css"/>
+    </h:head>
+    <h:body>
+        <h1>Guest Book</h1>
+        <h:form>
+            <p><h:commandButton value="Add Entry" action="addentry"/></p>
+        </h:form>
+        <h:dataTable value="#{guestbookBean.guests}" var="guest"
+                     rowClasses="oddRows,evenRows" headerClass="header"      
+                     styleClass="table" cellpadding="5" cellspacing="0">     
+            <h:column>                                    
+                <f:facet name="header">Date</f:facet>
+                    #{guest.date}                       
+            </h:column>                                   
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                    #{guest.name}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                    #{guest.email}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Message</f:facet>
+                    #{guest.message}
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>

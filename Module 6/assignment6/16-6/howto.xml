@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<covers>
+    <baseurl>http://localhost/</baseurl>
+    <cover>
+        <image>cpphtp8.jpg</image>
+        <title>C++ How to Program</title>
+    </cover>
+    <cover>
+        <image>jhtp9.jpg</image>
+        <title>Java How to Program</title>
+    </cover>
+    <cover>
+        <image>vb2010htp.jpg</image>
+        <title>Visual Basic How To Program</title>
+    </cover>
+    <cover>
+        <image>vcsharp2010htp.jpg</image>
+        <title>Visual C# How To Program</title>
+    </cover>
+</covers>

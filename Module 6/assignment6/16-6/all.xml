@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<covers>
+    <baseurl>http://localhost/</baseurl>
+    <cover>
+        <image>vb2010htp.jpg</image>
+        <title>Visual Basic How To Program</title>
+    </cover>
+    <cover>
+        <image>vcsharp20120htp.jpg</image>
+        <title>Visual C# How To Program</title>
+    </cover>
+    <cover>
+        <image>simplyvb2008.jpg</image>
+        <title>Simply VB 2008</title>
+    </cover>
+</covers>
