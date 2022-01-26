@@ -2,32 +2,32 @@
 <wordmatch>
 	<exercise>
 		<key>
-		<keyterm>Loop Body</keyterm>
-		<decription>is the part of the body that contains the statements to be repeated</decription>
+			<keyterm>Loop Body</keyterm>
+			<decription>is the part of the body that contains the statements to be repeated</decription>
 		</key>
 		<key>
-		<keyterm>Iteration</keyterm>
-		<decription>is one time execution of the loop body.</decription>
+			<keyterm>Iteration</keyterm>
+			<decription>is one time execution of the loop body.</decription>
 		</key>
 		<key>
-		<keyterm>Loop Condition</keyterm>
-		<decription>Description</decription>
+			<keyterm>Loop Condition</keyterm>
+			<decription>Description</decription>
 		</key>
 		<key>
-		<keyterm>Infinite Loop</keyterm>
-		<decription>Description</decription>
+			<keyterm>Infinite Loop</keyterm>
+			<decription>Description</decription>
 		</key>
 		<key>
-		<keyterm>Sentinel Value</keyterm>
-		<decription>Description</decription>
+			<keyterm>Sentinel Value</keyterm>
+			<decription>Description</decription>
 		</key>
 		<key>
-		<keyterm>Off-by-one</keyterm>
-		<decription>is an error in the program that causes the loop body to be executed one more or less time.</decription>
+			<keyterm>Off-by-one</keyterm>
+			<decription>is an error in the program that causes the loop body to be executed one more or less time.</decription>
 		</key>
 		<key>
-		<keyterm>Input Redirection</keyterm>
-		<decription>is to redirect the output to a data file rather to the console. The file is specified at the command line after the symbol >.</decription>
+			<keyterm>Input Redirection</keyterm>
+			<decription>is to redirect the output to a data file rather to the console. The file is specified at the command line after the symbol >.</decription>
 		</key>
 		<!-- <key>
 		<keyterm>Output Redirection</keyterm>
